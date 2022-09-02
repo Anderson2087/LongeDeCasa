@@ -32,4 +32,9 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    void OnCollisionEnter(Collision collision){
+
+        Debug.Log("Eu colidi com alguma coisa: " + collision.collider.name);
+    }
 }
