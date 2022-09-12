@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public Text textoPontuacao;
     //Declarando o player para cauculo da pontuação no decorer do jogo;
     public PlayerController player;
+    public LevaNaveAoPlaneta levaNaveAoPlaneta;
     //Declarando a possição inicial do Player;
     Vector3 posicaoInicial;
     //Declarando divisor da pontuação, para a mesma não ficar subindo descontroladamente;
@@ -18,6 +19,9 @@ public class GameController : MonoBehaviour
     public GameObject painelGameOver;
 
     public GameObject painelVencerJogo;
+
+    public AudioClip sfxVenceuJogo;
+    public AudioController audioController;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,9 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null){
+            return;
+        }
         Vector3 distanciaPercorida = player.transform.position - posicaoInicial;
         float pontuacao = distanciaPercorida.z / divisorDaPontuacao;
         textoPontuacao.text = pontuacao.ToString("0");
@@ -41,6 +48,8 @@ public class GameController : MonoBehaviour
 
     public void VencerJogo(){
 
+        levaNaveAoPlaneta.LeveNaveAoPlaneta();
+        audioController.ToqueSFX(sfxVenceuJogo);
         painelVencerJogo.SetActive(true);
         //RecaregarLevel();
     }
@@ -50,4 +59,10 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
+
+    public void SairDoJogo(){
+
+        Application.Quit();
+    }
+
 }

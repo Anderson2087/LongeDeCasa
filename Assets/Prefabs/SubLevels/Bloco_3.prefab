@@ -280,6 +280,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parede (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4218532905983009133, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714963013583298557, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
 --- !u!4 &5011971136707704519 stripped
@@ -341,6 +349,14 @@ PrefabInstance:
     - target: {fileID: 278299360565208644, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
       propertyPath: m_Name
       value: Parede
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218532905983009133, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714963013583298557, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef27268d295303d49a2e9238e1b220e5, type: 3}
